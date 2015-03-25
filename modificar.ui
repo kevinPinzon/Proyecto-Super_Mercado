@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>modificar</class>
+ <widget class="QDialog" name="modificar">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>731</width>
+    <height>473</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>10</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Modificar</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="bt_terminar">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>410</y>
+     <width>201</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Modificar</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tb_productos">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>50</y>
+     <width>421</width>
+     <height>291</height>
+    </rect>
+   </property>
+   <column>
+    <property name="text">
+     <string>Nombre</string>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Precio Uni.</string>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Cantidad Total.</string>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Caducidad</string>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+   </column>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>350</y>
+     <width>241</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Actualizar Tabla</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="rd_carnes">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>250</y>
+     <width>117</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Carnes</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="rd_postres">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>330</y>
+     <width>117</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Postres</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="rd_frutas">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>250</y>
+     <width>111</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Frutas</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="rd_congelados">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>330</y>
+     <width>121</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>congelados</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>360</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <italic>false</italic>
+     <bold>true</bold>
+     <underline>false</underline>
+     <strikeout>false</strikeout>
+    </font>
+   </property>
+   <property name="text">
+    <string>Bebidas</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="rd_vegetales">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>290</y>
+     <width>111</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Vegetales</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="rd_sodas">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>400</y>
+     <width>117</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Soda</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="rd_agua">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>400</y>
+     <width>117</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Agua</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>220</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Alimentos</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="rd_granos">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>290</y>
+     <width>117</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Granos</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="rd_alcohol">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>440</y>
+     <width>117</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Vino</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="rd_jugos">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>440</y>
+     <width>117</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Jugo</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>70</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Precio por unidad</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txt_nombreP">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>40</y>
+     <width>161</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="sp_caducidad">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>100</y>
+     <width>101</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="dateTime">
+    <datetime>
+     <hour>0</hour>
+     <minute>0</minute>
+     <second>0</second>
+     <year>2015</year>
+     <month>1</month>
+     <day>1</day>
+    </datetime>
+   </property>
+   <property name="displayFormat">
+    <string>d/M/yy</string>
+   </property>
+   <property name="calendarPopup">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>130</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cantidad</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>40</y>
+     <width>101</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Nombre</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="sp_cantidad">
+   <property name="geometry">
+    <rect>
+     <x>647</x>
+     <y>130</y>
+     <width>61</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="minimum">
+    <number>1</number>
+   </property>
+   <property name="maximum">
+    <number>1000</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>100</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Caducidad</string>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="sp_precio">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>66</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="value">
+    <double>1.000000000000000</double>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txt_color">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>160</y>
+     <width>113</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_9">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>186</y>
+     <width>81</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Marca</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>160</y>
+     <width>81</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Color</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txt_marca">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>190</y>
+     <width>113</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>410</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>cancelar</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>modificar</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>99</x>
+     <y>428</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>99</x>
+     <y>405</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
