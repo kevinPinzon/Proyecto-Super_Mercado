@@ -5,6 +5,9 @@
 #include <QTableWidgetItem>
 #include <string>
 #include <sstream>
+#include <iostream>
+
+using std::cout;
 
 using std::vector;
 
@@ -25,37 +28,23 @@ void eliminar::on_pushButton_clicked()
 {
 
 
-    //for(int i=0; i<ui->tb_productos->rowCount();i++){
-    //    ui->tb_productos->removeRow(i);
-    //}
+    ui->tb_productos->model()->removeRows(0,100);
+    int tablesize = productos->size();
+    ui->tb_productos->setRowCount(tablesize);
 
-//    while (ui->tb_productos->rowCount())
-//            ui->tb_productos->removeRow(ui->tb_productos->rowCount()-1);
-
-//    ui->tb_productos->clear();
-  //  ui->tb_productos->setRowCount(0);
-    //ui->tb_productos->insertRow(0);
-
-    ui->tb_productos->clear();
-    ui->tb_productos->clearContents();
-    ui->tb_productos->setRowCount(this->productos->size());
-
-//    ui->tb_productos->setRowCount(0);
-
-    for(int i=0; i<this->productos->size(); i++){
+    for(int i=0; i<productos->size(); i++){
             string caducidad= (*productos)[i]->getCaducidad();
             stringstream cantidad,precio;
             cantidad<<(*productos)[i]->getCantidad()<<" ";
             precio<<"$ "<<(*productos)[i]->precio();
             string nombre=(*productos)[i]->getNombre();
 
-            ui->tb_productos->insertRow(ui->tb_productos->rowCount());
-
             ui->tb_productos->setItem(i,0,new QTableWidgetItem(nombre .data()));
             ui->tb_productos->setItem(i,1,new QTableWidgetItem(precio.str().data()));
             ui->tb_productos->setItem(i,2,new QTableWidgetItem(cantidad.str().data()));
             ui->tb_productos->setItem(i,3,new QTableWidgetItem(caducidad.data()));
     }
+
 
 }
 

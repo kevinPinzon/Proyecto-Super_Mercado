@@ -32,22 +32,24 @@ void verInventario::on_tb_productos_itemClicked(QTableWidgetItem *item)
 
 void verInventario::on_pushButton_clicked()
 {
-    ui->tb_productos->setRowCount(productos->size());
+
+
+
+    ui->tb_productos->model()->removeRows(0,100);
+    int tablesize = productos->size();
+    ui->tb_productos->setRowCount(tablesize);
 
     for(int i=0; i<productos->size(); i++){
             string caducidad= (*productos)[i]->getCaducidad();
             stringstream cantidad,precio;
-            cantidad<<" "<<(*productos)[i]->getCantidad();
+            cantidad<<(*productos)[i]->getCantidad()<<" ";
             precio<<"$ "<<(*productos)[i]->precio();
             string nombre=(*productos)[i]->getNombre();
 
-            ui->tb_productos->insertRow(ui->tb_productos->rowCount());
-
-            ui->tb_productos->setItem(ui->tb_productos->rowCount()-productos->size()-1,0,new QTableWidgetItem(nombre .data()));
-            ui->tb_productos->setItem(ui->tb_productos->rowCount()-productos->size()-1,1,new QTableWidgetItem(precio.str().data()));
-            ui->tb_productos->setItem(ui->tb_productos->rowCount()-productos->size()-1,2,new QTableWidgetItem(cantidad.str().data()));
-            ui->tb_productos->setItem(ui->tb_productos->rowCount()-productos->size()-1,3,new QTableWidgetItem(caducidad.data()));
-          //  ui->tb_productos->setItem(ui->tb_productos->rowCount()-productos->size()-1,4,new QTableWidgetItem("tipo x"));
+            ui->tb_productos->setItem(i,0,new QTableWidgetItem(nombre .data()));
+            ui->tb_productos->setItem(i,1,new QTableWidgetItem(precio.str().data()));
+            ui->tb_productos->setItem(i,2,new QTableWidgetItem(cantidad.str().data()));
+            ui->tb_productos->setItem(i,3,new QTableWidgetItem(caducidad.data()));
     }
     stringstream ss;
     total=0;
