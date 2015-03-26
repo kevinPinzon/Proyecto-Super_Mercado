@@ -38,7 +38,7 @@
     <rect>
      <x>70</x>
      <y>60</y>
-     <width>521</width>
+     <width>411</width>
      <height>181</height>
     </rect>
    </property>
@@ -81,18 +81,6 @@
    <column>
     <property name="text">
      <string>Caducidad</string>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>10</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Tipo</string>
     </property>
     <property name="font">
      <font>

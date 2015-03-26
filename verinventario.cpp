@@ -47,7 +47,7 @@ void verInventario::on_pushButton_clicked()
             ui->tb_productos->setItem(ui->tb_productos->rowCount()-productos->size()-1,1,new QTableWidgetItem(precio.str().data()));
             ui->tb_productos->setItem(ui->tb_productos->rowCount()-productos->size()-1,2,new QTableWidgetItem(cantidad.str().data()));
             ui->tb_productos->setItem(ui->tb_productos->rowCount()-productos->size()-1,3,new QTableWidgetItem(caducidad.data()));
-            ui->tb_productos->setItem(ui->tb_productos->rowCount()-productos->size()-1,4,new QTableWidgetItem("tipo x"));
+          //  ui->tb_productos->setItem(ui->tb_productos->rowCount()-productos->size()-1,4,new QTableWidgetItem("tipo x"));
     }
     stringstream ss;
     total=0;

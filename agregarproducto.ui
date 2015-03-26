@@ -33,7 +33,7 @@
     <string>Agregar Producto</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_3">
+  <widget class="QLabel" name="label_precio">
    <property name="geometry">
     <rect>
      <x>40</x>
@@ -127,7 +127,7 @@
     <number>1000</number>
    </property>
   </widget>
-  <widget class="QLabel" name="label_2">
+  <widget class="QLabel" name="label_nombre">
    <property name="geometry">
     <rect>
      <x>40</x>
@@ -140,7 +140,7 @@
     <string>Nombre</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_4">
+  <widget class="QLabel" name="label_caudicdad">
    <property name="geometry">
     <rect>
      <x>40</x>
@@ -349,7 +349,7 @@
     <string>Color</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_9">
+  <widget class="QLabel" name="label_marca">
    <property name="geometry">
     <rect>
      <x>40</x>
