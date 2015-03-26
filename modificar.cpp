@@ -59,11 +59,12 @@ void modificar::on_tb_productos_itemClicked(QTableWidgetItem *item)
 void modificar::on_pushButton_clicked()
 {
 
-    for(int i=0; i<ui->tb_productos->rowCount();i++){
-        ui->tb_productos->removeRow(i);
-    }
+    //for(int i=0; i<ui->tb_productos->rowCount();i++){
+     //   ui->tb_productos->removeRow(i);
+    //}
 
-
+    ui->tb_productos->clear();
+    ui->tb_productos->clearContents();
     ui->tb_productos->setRowCount(productos->size());
 
     for(int i=0; i<productos->size(); i++){
@@ -86,64 +87,66 @@ void modificar::on_pushButton_clicked()
 
 void modificar::on_bt_terminar_clicked()
 {
+    if (ui->rd_frutas->isChecked() || ui->rd_vegetales->isChecked() || ui->rd_postres->isChecked() ||
+            ui->rd_carnes->isChecked() || ui->rd_congelados->isChecked() || ui->rd_granos->isChecked() ||
+            ui->rd_sodas->isChecked() || ui->rd_alcohol->isChecked() || ui->rd_agua->isChecked() || ui->rd_jugos->isChecked()
+            || (productos->size()!=0)){
 
+        string nombre=ui->txt_nombreP->text().toStdString();
+        double precioUnidad=ui->sp_precio->value();
+        string caducidad=ui->sp_caducidad->text().toStdString();
+        int cantidad=ui->sp_cantidad->value();
+        string color=ui->txt_color->text().toStdString();
+        string marca=ui->txt_marca->text().toStdString();
 
+        if(ui->rd_frutas->isChecked()){
+            Frutas* nuevo= new  Frutas(nombre,precioUnidad,caducidad,cantidad,color);
+            agregar(nuevo);
+        }
+        if(ui->rd_vegetales->isChecked()){
+           vegetales* nuevo= new vegetales(nombre,precioUnidad,caducidad,cantidad,color);
+            agregar(nuevo);
+        }
+        if(ui->rd_postres->isChecked()){
+           Postres* nuevo= new Postres(nombre,precioUnidad,caducidad,cantidad,color);
+            agregar(nuevo);
+        }
+        if(ui->rd_carnes->isChecked()){
+           Carnes* nuevo= new Carnes(nombre,precioUnidad,caducidad,cantidad,color);
+            agregar(nuevo);
+        }
+        if(ui->rd_congelados->isChecked()){
+           Congelados* nuevo = new Congelados(nombre,precioUnidad,caducidad,cantidad,color);
+            agregar(nuevo);
+        }
+        if(ui->rd_granos->isChecked()){
+           Granos* nuevo= new Granos(nombre,precioUnidad,caducidad,cantidad,color);
+            agregar(nuevo);
+        }
+        if(ui->rd_sodas->isChecked()){
+           Sodas* nuevo = new Sodas(nombre,precioUnidad,caducidad,cantidad,marca);
+            agregar(nuevo);
+        }
+        if(ui->rd_alcohol->isChecked()){
+           Alcohol* nuevo = new Alcohol(nombre,precioUnidad,caducidad,cantidad,marca);
+            agregar(nuevo);
+        }
+        if(ui->rd_agua->isChecked()){
+           Agua* nuevo = new Agua(nombre,precioUnidad,caducidad,cantidad,marca);
+            agregar(nuevo);
+        }
+        if(ui->rd_jugos->isChecked()){
+           Jugos* nuevo = new Jugos(nombre,precioUnidad,caducidad,cantidad,marca);
+            agregar(nuevo);
+        }
 
-    string nombre=ui->txt_nombreP->text().toStdString();
-    double precioUnidad=ui->sp_precio->value();
-    string caducidad=ui->sp_caducidad->text().toStdString();
-    int cantidad=ui->sp_cantidad->value();
-    string color=ui->txt_color->text().toStdString();
-    string marca=ui->txt_marca->text().toStdString();
+        ui->tb_productos->removeRow(row);
+        productos->erase(productos->begin()+row);
 
-    if(ui->rd_frutas->isChecked()){
-        Frutas* nuevo= new  Frutas(nombre,precioUnidad,caducidad,cantidad,color);
-        agregar(nuevo);
+        ui->txt_nombreP->setText(NULL);
+        ui->sp_precio->setValue(1);
+        ui->sp_cantidad->setValue(10);
+        ui->txt_color->setText(NULL);
+        ui->txt_marca->setText(NULL);
     }
-    if(ui->rd_vegetales->isChecked()){
-       vegetales* nuevo= new vegetales(nombre,precioUnidad,caducidad,cantidad,color);
-        agregar(nuevo);
-    }
-    if(ui->rd_postres->isChecked()){
-       Postres* nuevo= new Postres(nombre,precioUnidad,caducidad,cantidad,color);
-        agregar(nuevo);
-    }
-    if(ui->rd_carnes->isChecked()){
-       Carnes* nuevo= new Carnes(nombre,precioUnidad,caducidad,cantidad,color);
-        agregar(nuevo);
-    }
-    if(ui->rd_congelados->isChecked()){
-       Congelados* nuevo = new Congelados(nombre,precioUnidad,caducidad,cantidad,color);
-        agregar(nuevo);
-    }
-    if(ui->rd_granos->isChecked()){
-       Granos* nuevo= new Granos(nombre,precioUnidad,caducidad,cantidad,color);
-        agregar(nuevo);
-    }
-    if(ui->rd_sodas->isChecked()){
-       Sodas* nuevo = new Sodas(nombre,precioUnidad,caducidad,cantidad,marca);
-        agregar(nuevo);
-    }
-    if(ui->rd_alcohol->isChecked()){
-       Alcohol* nuevo = new Alcohol(nombre,precioUnidad,caducidad,cantidad,marca);
-        agregar(nuevo);
-    }
-    if(ui->rd_agua->isChecked()){
-       Agua* nuevo = new Agua(nombre,precioUnidad,caducidad,cantidad,marca);
-        agregar(nuevo);
-    }
-    if(ui->rd_jugos->isChecked()){
-       Jugos* nuevo = new Jugos(nombre,precioUnidad,caducidad,cantidad,marca);
-        agregar(nuevo);
-    }
-
-    ui->tb_productos->removeRow(row);
-    productos->erase(productos->begin()+row);
-
-    ui->txt_nombreP->setText(NULL);
-    ui->sp_precio->setValue(1);
-    ui->sp_cantidad->setValue(10);
-    ui->txt_color->setText(NULL);
-    ui->txt_marca->setText(NULL);
-
 }
