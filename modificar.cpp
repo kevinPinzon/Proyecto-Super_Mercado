@@ -45,7 +45,7 @@ void modificar::on_tb_productos_itemClicked(QTableWidgetItem *item)
     //QTableWidgetItem *caducidad = ui->tb_productos->item(row,3);
 
 
-
+    //nt cantidad =(*productos)[row]->getCantidad();
     string nombre=(*productos)[row]->getNombre();
     int cantidad =(*productos)[row]->getCantidad();
     int precio=(*productos)[row]->precio();
